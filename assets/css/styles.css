@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+body {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  background-image: url(../imgs/bg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card--container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  background: url(../imgs/background.webp) repeat-y center top;
+
+  padding: 3rem 8rem;
+}
+
+.card {
+  background-color: aqua;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover .video--conteiner {
+  height: 50%;
+  bottom: 50%;
+}
+
+.video--conteiner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  transition: all 0.35s ease-in;
+}
+
+.video--conteiner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card:hover .detail {
+  bottom: 0;
+}
+.detail {
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: linear-gradient(to right, #076064, #1e4258);
+  padding: 1.5rem;
+  transition: all 0.35s ease-in;
+}
+
+.detail .title {
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.detail span {
+  text-transform: uppercase;
+  color: #999;
+}
+
+.detail p {
+  color: #fff;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+button {
+  position: absolute;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  bottom: 1.5rem;
+  background-image: linear-gradient(to bottom, #799905, #556b04);
+  outline: none;
+  border: none;
+  color: #cee481;
+  cursor: pointer;
+}
+
+button:hover {
+  background-image: linear-gradient(to bottom, #b1c95b, #8db10e);
+  color: #fff;
+}
